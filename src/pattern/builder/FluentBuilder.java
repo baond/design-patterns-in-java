@@ -1,4 +1,4 @@
-package builder.pattern;
+package pattern.builder;
 
 /**
  * with class has many properties which some is mandatory and other is optional, we can using builder to create instance part by part.
