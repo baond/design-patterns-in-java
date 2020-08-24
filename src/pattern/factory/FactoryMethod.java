@@ -50,4 +50,10 @@ class Point {
     public static Point createPolarPoint(double r, double a) {
         return new Point(r * Math.cos(a), r * Math.sin(a));
     }
+
+    //We can move factory method into a nested static factory class
+    public static class Factory {
+        //public static Point createCartesianPoint(double x, double y);
+        //public static Point createPolarPoint(double r, double a);
+    }
 }
