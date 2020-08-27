@@ -8,14 +8,14 @@ import java.io.ObjectOutputStream;
 public class EnumBaseSingletonDemo {
     public static void saveToFile(EnumBaseSingleton singleton, String fileName) throws Exception {
         try (FileOutputStream fileOutputStream = new FileOutputStream(fileName);
-             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);){
+             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);) {
             objectOutputStream.writeObject(singleton);
         }
     }
 
     public static EnumBaseSingleton readObjectFromFile(String fileName) throws Exception {
-        try(FileInputStream fileInputStream = new FileInputStream(fileName);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)){
+        try (FileInputStream fileInputStream = new FileInputStream(fileName);
+             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
             return (EnumBaseSingleton) objectInputStream.readObject();
         }
     }
